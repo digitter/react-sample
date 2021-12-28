@@ -17,8 +17,8 @@ export default function BookList() {
   return (
     <div>
       <h1>Book List</h1>
-      <div style={{display: 'flex', flexDirection: 'row'}}>
-        <table style={{marginRight: 50}}>
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <table style={{ marginRight: 50 }}>
           <thead>
             <tr>
               <th>ID</th>
@@ -43,15 +43,15 @@ export default function BookList() {
         </table>
 
         {Object.keys(selectedBook).length ? (
-            <div style={{border: '5px solid gray'}}>
-              <button onClick={() => handleShowDetails({})}>Close ❌</button>
+          <div style={{ border: '5px solid gray' }}>
+            <button onClick={() => handleShowDetails({})}>Close ❌</button>
 
-              <p>ID: {selectedBook.id}</p>
-              <p>Title: {selectedBook.id}</p>
-              <p>Body: {selectedBook.id}</p>
-              <p>Created At: {selectedBook.created_at}</p>
-            </div>
-          ) : null
+            <p>ID: {selectedBook.id}</p>
+            <p>Title: {selectedBook.title}</p>
+            <p>Body: {selectedBook.body}</p>
+            <p>Created At: {selectedBook.created_at}</p>
+          </div>
+        ) : null
         }
       </div>
     </div>
